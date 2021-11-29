@@ -30,6 +30,8 @@ Except handler failing
         Fail    bar
     EXCEPT    bar
         Fail   oh no
+    ELSE
+        Fail    should not be executed
     END
 
 Else branch executed

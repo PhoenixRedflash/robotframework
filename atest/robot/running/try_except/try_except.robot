@@ -1,7 +1,7 @@
 *** Settings ***
 Resource          try_except_resource.robot
 Suite Setup       Run Tests    ${EMPTY}    running/try_except/try_except.robot
-Test Template     Block statuses should be
+Test Template     Verify try except and block statuses
 
 *** Test Cases ***
 Try with no failures
@@ -14,7 +14,7 @@ Second except executed
     FAIL    NOT RUN    PASS    NOT RUN
 
 Except handler failing
-    FAIL    FAIL
+    FAIL    FAIL    NOT RUN
 
 Else branch executed
     PASS    NOT RUN    PASS
